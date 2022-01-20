@@ -89,7 +89,7 @@ class JudgeUtilsTest {
 	// 現在時刻：2017/04/01
 	// 合格条件：false
 	@Test
-	public void testIsBillingAge_17歳_課金不可() {
+	public void testIsBillingAge_18歳_課金不可() {
 
 		// 事前処理(Mock)
 		Calendar cal = Calendar.getInstance();
@@ -126,7 +126,7 @@ class JudgeUtilsTest {
 	// 現在時刻：2018/04/01
 	// 合格条件：true
 	@Test
-	public void testIsRegisterdAge_18歳_プレイ可能() {
+	public void testIsRegisterdAge_17歳_プレイ可能() {
 
 		// 事前処理(Mock)
 		Calendar cal = Calendar.getInstance();
@@ -140,7 +140,7 @@ class JudgeUtilsTest {
 		// 引数
 		Calendar birthcal = Calendar.getInstance();
 		birthcal.clear();
-		birthcal.set(Calendar.YEAR, 2000);
+		birthcal.set(Calendar.YEAR, 2001);
 		birthcal.set(Calendar.MONTH, Calendar.APRIL);
 		birthcal.set(Calendar.DAY_OF_MONTH, 01);
 		Date birthDay = birthcal.getTime();
